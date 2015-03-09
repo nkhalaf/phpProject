@@ -6,6 +6,7 @@ if(!isset($_POST['userName']) || (!isset($_POST['password'])) || (!isset($_POST[
 require_once('db.php');
 require_once('usersAPI.php');
 $user = tinyf_users_get_by_name($_POST['userName']);
+print_r($user);
 if($user==null){
 $result = tinyf_users_add($_POST['userName'], $_POST['password'], $_POST['email'],0);
 if($result){

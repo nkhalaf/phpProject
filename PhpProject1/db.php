@@ -19,7 +19,7 @@ if(!mysql_select_db($tf_dbname)){
 @mysql_query("set Names 'utf8'");
 
 function  tinyf_db_close(){
-    global $tf_handle;
+     global $tf_handle;
     @mysql_close($tf_handle);
 }
 ?>

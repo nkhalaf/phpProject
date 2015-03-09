@@ -133,6 +133,10 @@ function tinyf_users_update($uid,$name=Null,$password=Null,$email=Null,$isadmin=
 function tinyf_users_get_by_name($name){
     global $tf_handle;
        $n_name=  mysql_real_escape_string(strip_tags($name),$tf_handle);
+$result = tinyf_users_get("WHERE `name`='".$n_name."'");
+if($result != null){
+ return $result[0] ;  
+}
 
 }
 
